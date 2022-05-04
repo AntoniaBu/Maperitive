@@ -1,11 +1,8 @@
-// Default rendering rules for Maperitive resembling that of OSM Mapnik
 // http://maperitive.net
 
-// Created by Igor Brejc
-// Released under the Creative Commons Attribution-ShareAlike 3.0 License (http://creativecommons.org/licenses/by-sa/3.0/)
-// Updates by Michael <quelbs_at_gmail.com>
+// Updated by Antonia Busch
 // Icons used: Map icons CC-0 from SJJB Management (http://www.sjjb.co.uk/mapicons)
-// LK_Argus-Version Gebiete
+// Version Gebiete
 
 features
 	points, areas
@@ -128,8 +125,6 @@ features
 		contour major : contour[@isMulti(elevation, 100)]
 		contour minor : contour[@isMulti(elevation, 20) and not @isMulti(elevation, 100)]
 
-		gps tracks : gpstrack[]
-		gps routes : gpsroute[]	
 
 // Routes
 //		route ncn : relation[type=route AND route=bicycle AND network=ncn]
@@ -167,10 +162,6 @@ features
 		lift_gate : barrier=lift_gate
 		aerialway station : aerialway=station
 		motorway_junction : highway=motorway_junction
-
-		gps waypoints : gpswaypoint[]
-		gps trackpoints: gpstrack[].gpspoint[]
-		gps routepoints: gpsroute[].gpspoint[]
 
 		subway entrance : railway=subway_entrance
 		subway station : railway=station AND station=subway
